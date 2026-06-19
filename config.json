@@ -1,0 +1,11 @@
+{
+  "_comment": "Copier ce fichier sur la Pico WH à la racine du flash (Thonny ou mpremote)",
+  "wifi_ssid":       "TON_WIFI",
+  "wifi_password":   "TON_MOT_DE_PASSE",
+  "backend_url":     "https://VOTRE-BACKEND.example.com",
+  "device_id":       "ruche-1-pico",
+  "ruche_token":     "COPIER_LE_TOKEN_GENERE_PAR_RENDER",
+  "send_interval_s": 30,
+  "vbat_max_v":      4.2,
+  "vbat_min_v":      3.0
+}

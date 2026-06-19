@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: ruche-api
+    runtime: python
+    plan: starter          # free plan = 512 MB RAM, insuffisant pour YOLO → starter 1 GB
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT --workers 1
+    envVars:
+      - key: RUCHE_TOKEN
+        generateValue: true
+      - key: ALLOWED_ORIGIN
+        value: https://TON_GITHUBUSER.github.io
+      - key: MAX_VIDEO_MB
+        value: "200"
+      - key: YOLO_MODEL
+        value: "models/best.pt"
+      - key: LINE_POS
+        value: "0.50"
+      - key: CONF_THRESH
+        value: "0.30"
+    disk:
+      name: ruche-data
+      mountPath: /data
+      sizeGB: 2

@@ -1,0 +1,14 @@
+# Web framework
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0
+pydantic>=2.0.0
+python-multipart>=0.0.9
+aiofiles>=23.0.0
+
+# Vision IA
+ultralytics>=8.2.0   # YOLOv8 (inclut torch, torchvision)
+opencv-python-headless>=4.9.0
+numpy>=1.24.0
+
+# Optionnel — améliore l'assignation du tracker
+scipy>=1.12.0
